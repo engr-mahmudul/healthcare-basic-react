@@ -5,13 +5,17 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import Homepage from './components/Homepage/Homepage';
 import PageNotFound from './components/PageNotFound/PageNotFound';
 import LogIn from './components/LogIn/LogIn';
+import AuthProvider from './context/AuthProvider';
+import Navigation from './components/Navigation/Navigation';
 
 
 function App() {
   return (
     <div >
-    
+      <AuthProvider>
+       
         <BrowserRouter>
+        <Navigation></Navigation>
           <Switch>
             <Route exact path='/'>
               <Homepage></Homepage>
@@ -28,8 +32,7 @@ function App() {
 
           </Switch>
         </BrowserRouter>
-     
-
+      </AuthProvider>
     </div>
   );
 }
