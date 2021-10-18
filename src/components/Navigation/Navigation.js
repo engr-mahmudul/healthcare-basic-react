@@ -30,12 +30,9 @@ const Navigation = () => {
                         <Nav.Link as={HashLink} to="/home#services">Services</Nav.Link>
 
                         {user?.email ?
-                            <Nav >
-                                {
-                                    user?.photoUrl === null?<div>{user.displayName}</div>:
-                                    <img src={user?.photoURL} alt="" className='user-img mx-4' />
-                                }
-                                <span> <Button onClick={logOut} className='bg-info' style={{border:'none',outline:'none',fontSize:'larger'}}>  {userIcon} </Button> </span>
+                            <Nav className='ml-4'>
+                                
+                                <span> <Button onClick={logOut} className='bg-info mr-2' style={{border:'none',outline:'none',fontSize:'larger'}}>  {userIcon} </Button> <span style={{color:'yellow', fontWeight:'700'}}>{user.displayName}</span></span>
                             </Nav> :
                             <Nav.Link as={HashLink} to="/login">Log in</Nav.Link>}
 
