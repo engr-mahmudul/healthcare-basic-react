@@ -1,5 +1,11 @@
-.not-Found img{
- width: 50%;
- display: flex;
- justify-content: center;
+.notfound-img{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  height: 70vh;
+}
+.notfound-button{
+    display: flex;
+    justify-content: center;
 }

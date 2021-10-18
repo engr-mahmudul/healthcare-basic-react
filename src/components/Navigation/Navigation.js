@@ -15,7 +15,7 @@ const Navigation = () => {
     const { user, logOut } = useAuth();
     return (
         <>
-            <Navbar bg={'info'} variant="dark" sticky="top" collapseOnSelect expand="lg" >
+            <Navbar  className='py-3' bg={'info'} variant="dark" sticky="top" collapseOnSelect expand="lg" >
                 <Container>
                     <Navbar.Brand >
                         <img src={navLogo} style={{ height: "40px", width: "50px" }} alt="" />
