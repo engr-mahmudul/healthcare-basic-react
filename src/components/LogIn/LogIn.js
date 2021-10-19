@@ -1,5 +1,6 @@
 import React from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
+import { Link, useLocation, useHistory} from 'react-router-dom';
 import useAuth from '../../hooks/useAuth';
 import image from '../../images/authbanner.png'
 import './Login.css'
@@ -7,6 +8,8 @@ import './Login.css'
 
 const LogIn = () => {
   const { user, email, password, error, signInWithGoogle, setName, setEmail, setPassword, setIsLogIn, createNewUser, logInUser, setError, isLogIn, logOut } = useAuth();
+  const location = useLocation();
+  const history = useHistory()
   const SubmitHandler = (e) => {
     e.preventDefault()
 
@@ -36,6 +39,15 @@ const LogIn = () => {
   const checkBoxHandler = (event) => {
     setIsLogIn(event.target.checked)
   }
+  //----------------------------------signin with google-------------------
+  const redirect_url = location.state?.from || '/';
+  const handleGoogleSignIn = ()=>{
+    signInWithGoogle()
+    .then((result) => {
+        console.log(result.user)
+        history.push(redirect_url);
+    })
+}
   return (
     <Container>
       <Row className="parent-div">
@@ -86,7 +98,7 @@ const LogIn = () => {
           {/*------------------------- Google Sign In part------------ */}
           <div className='pb-4'>
           <button className='btn px-5' style={{ backgroundColor: '#1B92AA', color: 'white', fontWeight: "700" }}
-                onClick={signInWithGoogle}
+                onClick={handleGoogleSignIn}
               >Click here for Google Sign in</button>
           </div>
         </Col>
