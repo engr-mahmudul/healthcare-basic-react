@@ -49,11 +49,10 @@ const useFirebase = () => {
     }
     // -------------------Email /Password log in----------------------------------
     const logInUser = (emai, password) => {
-        signInWithEmailAndPassword(auth, email, password)
+        return signInWithEmailAndPassword(auth, email, password)
           .then((result) => {
             // Signed in 
-            const user = result.user;
-            console.log("Logged in", user)
+            
             setError('')
             // ...
           })

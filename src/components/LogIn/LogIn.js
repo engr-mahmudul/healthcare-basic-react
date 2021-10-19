@@ -10,6 +10,8 @@ const LogIn = () => {
   const { user, email, password, error, signInWithGoogle, setName, setEmail, setPassword, setIsLogIn, createNewUser, logInUser, setError, isLogIn, logOut } = useAuth();
   const location = useLocation();
   const history = useHistory()
+ 
+  
   const SubmitHandler = (e) => {
     e.preventDefault()
 
@@ -24,7 +26,7 @@ const LogIn = () => {
     else {
       setError('')
     }
-    isLogIn ? logInUser(email, password) : createNewUser(email, password)
+    isLogIn ? logInUser (email, password) : createNewUser(email, password)
 
   }
   const nameHandler = (event) => {
@@ -45,8 +47,21 @@ const LogIn = () => {
     signInWithGoogle()
     .then((result) => {
         console.log(result.user)
+        setError('');
         history.push(redirect_url);
     })
+    .catch((error) => {
+      setError(error.message);
+     });
+  
+  //------------------------------Email and Password Sign In--------------
+  // const handleEmailPasswordSignIn = () =>{
+  //   logInUser ()
+  //   .then((result) => {
+  //     console.log(result.user)
+  //     history.push(redirect_url);
+  // })
+  // } 
 }
   return (
     <Container>
