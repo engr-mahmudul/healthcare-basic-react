@@ -9,13 +9,17 @@ import AuthProvider from './context/AuthProvider';
 import Navigation from './components/Navigation/Navigation';
 import Details from './components/Details/Details';
 import Footer from './components/Footer/Footer';
+import PrivateRoute from './components/PrivateRoute/PrivateRoute';
+import Goal from './components/Goal/Goal';
+import About from './components/About/About';
+import DataProvider from './context/DataProvider';
 
 
 function App() {
   return (
     <div >
       <AuthProvider>
-       
+       <DataProvider>
         <BrowserRouter>
         <Navigation></Navigation>
           <Switch>
@@ -25,18 +29,25 @@ function App() {
             <Route exact path='/home'>
               <Homepage></Homepage>
             </Route>
+            <Route exact path='/about'>
+              <About></About>
+            </Route>
+            <Route exact path='/goal'>
+              <Goal></Goal>
+            </Route>
             <Route exact path='/login'>
               <LogIn></LogIn>
             </Route>
-            <Route exact path='/details/:detailsId'>
+            <PrivateRoute exact path='/details/:detailsId'>
               <Details></Details>
-            </Route>
+            </PrivateRoute >
             <Route exact path='*'>
               <PageNotFound></PageNotFound>
             </Route>
 
           </Switch>
         </BrowserRouter>
+        </DataProvider>
         <Footer></Footer>
       </AuthProvider>
     </div>

@@ -1,6 +1,7 @@
 [
     {
         "id": 1,
+   
         "serviceName": "Doctor Counselling",
         "serviceProvider": 53,
         "avaiable": "8:00 am - 10:00 pm",
@@ -10,6 +11,7 @@
     {
         "id": 2,
         "serviceName": "Patient Operation",
+      
         "serviceProvider": 23,
         "avaiable": "12:00 pm - 11:00 pm",
         "status": "Pre-Book",
@@ -18,6 +20,7 @@
     {
         "id": 3,
         "serviceName": "Pathology Test",
+        "description": "In field, we have experience of many days. And we have all the best experts in the country in this regard",
         "serviceProvider": "20",
         "avaiable": "8:00 am - 10:00 pm",
         "status": "Pre-Book and Emergency",
@@ -26,6 +29,7 @@
     {
         "id": 4,
         "serviceName": "Ambulence Service",
+        
         "serviceProvider": 10,
         "avaiable": "24/7",
         "status": "Pre-Book and Emergenct",
@@ -34,6 +38,7 @@
     {
         "id": 5,
         "serviceName": "Dispensary Service",
+        
         "serviceProvider": 5,
         "avaiable": "8:00 am - 12:00 pm",
         "status": "Instant",
@@ -42,6 +47,7 @@
     {
         "id": 6,
         "serviceName": "Online Counselling",
+        
         "serviceProvider": 12,
         "avaiable": "8:00 am - 10:00 pm",
         "status": "Pre-Book",

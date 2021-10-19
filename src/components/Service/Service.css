@@ -18,3 +18,7 @@
     overflow: hidden;
     transition: transform .5s ease;
 }
+.description-p{
+    text-align: center;
+    font-weight: 600;
+}

@@ -20,7 +20,7 @@ const Footer = () => {
                 </Col>
                 <Col lg={4} md={6} sm={12} xs={12}>
                     <h4 style={{textAlign:'center',fontWeight:"700"}} >Location</h4>
-                    <img src={locationImg} alt="" height='250' width='400' />
+                    <img src={locationImg} alt="" height='250' width='100%' style={{borderRadius:'5px'}} />
                 </Col>
             </Row >
 
@@ -33,3 +33,4 @@ const Footer = () => {
 };
 
 export default Footer;
+

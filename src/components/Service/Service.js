@@ -13,7 +13,10 @@ const Service = (props) => {
                 </div>
                 <div>
                     <h4 style={{ textAlign: 'center', fontWeight: '700' }}>{serviceName}</h4>
-                    <h6 style={{ textAlign: 'center' }}>Available : {avaiable}</h6>
+                    <div className='p-3'>
+                    <p className='description-p'>In {serviceName} field, we have experience of many days. And we have { serviceProvider} the best experts in this country for this regard.</p>
+                    </div>
+                    <h6 style={{ textAlign: 'center', color: 'green' }}>Available : {avaiable}</h6>
 
                 </div>
                 <div className="button-class">
