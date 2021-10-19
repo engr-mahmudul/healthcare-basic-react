@@ -9,6 +9,7 @@ const Famous = () => {
     return (
         <Container className="my-5 text-center">
             <h1 className="text-center text-info py-5" style={{fontWeight:'800'}} >Our Famous Bangladeshi Doctors </h1>
+            
             <Row>
                 <Col lg={3} sm={6} xs={6} >
                     <div className="mx-4" className='galllery'>
