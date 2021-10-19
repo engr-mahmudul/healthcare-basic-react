@@ -7,7 +7,7 @@ import banner3 from '../../images/slider3.jpg'
 
 const Banner = () => {
     return (
-        <>
+        <div id='banner'>
         <Carousel>
         <Carousel.Item>
                 <img
@@ -28,7 +28,7 @@ const Banner = () => {
                     alt="First slide"
                 />
                 <Carousel.Caption>
-                    <h1 className=' google-fonts' >We are always for you</h1>
+                    <h1 className=' google-fonts' >We are always ready for you</h1>
                     <p className='slider-p'>Do regular body check-ups and stay away from the risk of major diseases.</p>
                 </Carousel.Caption>
             </Carousel.Item>
@@ -40,13 +40,13 @@ const Banner = () => {
                 />
 
                 <Carousel.Caption>
-                    <h1 className=' google-fonts'>Experts are Ready to serve you</h1>
+                    <h1 className=' google-fonts' >Experts are Ready to serve you</h1>
                     <p className='slider-p'>If you have any problems, take counseling without delay.</p>
                 </Carousel.Caption>
             </Carousel.Item>
             
         </Carousel>
-    </>
+    </div>
     );
 };
 

@@ -7,6 +7,7 @@ import PageNotFound from './components/PageNotFound/PageNotFound';
 import LogIn from './components/LogIn/LogIn';
 import AuthProvider from './context/AuthProvider';
 import Navigation from './components/Navigation/Navigation';
+import Details from './components/Details/Details';
 
 
 function App() {
@@ -25,6 +26,9 @@ function App() {
             </Route>
             <Route exact path='/login'>
               <LogIn></LogIn>
+            </Route>
+            <Route exact path='/details/:detailsId'>
+              <Details></Details>
             </Route>
             <Route exact path='*'>
               <PageNotFound></PageNotFound>

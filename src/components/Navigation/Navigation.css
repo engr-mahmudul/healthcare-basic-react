@@ -1,4 +1,6 @@
-
+.nav-bg{
+    background-color: #1b92aa;
+}
 .nav-link{
     color: rgb(255, 254, 251);
     font-weight: 800;
