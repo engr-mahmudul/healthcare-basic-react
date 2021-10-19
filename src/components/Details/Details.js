@@ -22,7 +22,7 @@ const Details = () => {
     // let slectedService={};
 
     const slectedService = services.filter(s => s.id === parseInt(detailsId));
-    console.log(slectedService[0].serviceName)
+    // console.log(slectedService[0].serviceName)
 
     // 
 
