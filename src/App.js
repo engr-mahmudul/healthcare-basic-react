@@ -8,6 +8,7 @@ import LogIn from './components/LogIn/LogIn';
 import AuthProvider from './context/AuthProvider';
 import Navigation from './components/Navigation/Navigation';
 import Details from './components/Details/Details';
+import Footer from './components/Footer/Footer';
 
 
 function App() {
@@ -36,6 +37,7 @@ function App() {
 
           </Switch>
         </BrowserRouter>
+        <Footer></Footer>
       </AuthProvider>
     </div>
   );
