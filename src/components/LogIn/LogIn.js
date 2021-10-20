@@ -7,7 +7,7 @@ import './Login.css'
 
 
 const LogIn = () => {
-  const { user, email, password, error, signInWithGoogle, setName, setEmail, setPassword, setIsLogIn, createNewUser, logInUser, setError, isLogIn, logOut } = useAuth();
+  const { user, email, password, error, signInWithGoogle, setName, setEmail, setPassword, setIsLogIn, createNewUser, logInUser, setError, isLogIn, logOut,isLoading, setIsLoading } = useAuth();
   const location = useLocation();
   const history = useHistory()
  
@@ -50,6 +50,7 @@ const LogIn = () => {
         setError('');
         history.push(redirect_url);
     })
+    .finally(()=>setIsLoading(false))
     .catch((error) => {
       setError(error.message);
      });

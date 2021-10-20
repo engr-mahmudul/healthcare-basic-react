@@ -2,14 +2,17 @@ import React, { useEffect, useState } from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
 import { useParams } from 'react-router';
 import { Link } from 'react-router-dom';
+import useAuth from '../../hooks/useAuth';
 import useData from '../../hooks/useData';
 import useFakeData from '../../hooks/useFakeData';
 import './Details.css'
 
 const Details = () => {
+    
     const { services } = useData()
     console.log("Contex", services)
     const { detailsId } = useParams();
+    console.log("para", detailsId)
 
     // console.log('fake', services)
     // const [info, setInfo] = useState([]);

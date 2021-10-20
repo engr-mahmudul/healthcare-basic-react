@@ -7,11 +7,12 @@ initializeAuthentication();
 const useFirebase = () => {
     // ----------------------------------states -----------------------------------
     const [user, setUser] = useState({});
-    const [name, setName] = useState('')
-    const [email, setEmail] = useState('')
-    const [password, setPassword] = useState('')
-    const [error, setError] = useState('')
-    const [isLogIn, setIsLogIn] = useState(false)
+    const [name, setName] = useState('');
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+    const [error, setError] = useState('');
+    const [isLogIn, setIsLogIn] = useState(false);
+    const [isLoading, setIsLoading] = useState(true);
 
 
     const auth = getAuth();
@@ -49,19 +50,22 @@ const useFirebase = () => {
     }
     // -------------------Email /Password log in----------------------------------
     const logInUser = (emai, password) => {
-        return signInWithEmailAndPassword(auth, email, password)
+        setIsLoading(true);
+        signInWithEmailAndPassword(auth, email, password)
           .then((result) => {
             // Signed in 
             
             setError('')
             // ...
           })
+          .finally(()=>setIsLoading(false))
           .catch((error) => {
             setError(error.message);
           });
       }
     // -------------------------Google Sign in Authentication-----------------------
     const signInWithGoogle = () => {
+        setIsLoading(true)
         return signInWithPopup(auth, googleProvider);
 
     }
@@ -79,10 +83,11 @@ const useFirebase = () => {
             if (user) {
                 setUser(user);
             }
+            setIsLoading(false)
         });
     }, [])
     return {
-        user, name, email, password, error, setName, setEmail, setPassword,setIsLogIn,setError,isLogIn, setIsLogIn, createNewUser,logInUser ,signInWithGoogle, logOut
+        user, name, email, password, error, setName, setEmail, setPassword,setIsLogIn,setError,isLogIn, setIsLogIn, createNewUser,logInUser ,signInWithGoogle, logOut,isLoading, setIsLoading
     }
 
 }
