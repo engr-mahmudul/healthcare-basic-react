@@ -12,7 +12,7 @@ const Service = (props) => {
                     <img src={image} alt="" style={{ width: "100%", height: "250px", borderRadius: '10px', border: '1px solid green' }} />
                 </div>
                 <div>
-                    <h4 style={{ textAlign: 'center', fontWeight: '700' }}>{serviceName}</h4>
+                    <h4 style={{ textAlign: 'center', fontWeight: '700' }} className='pt-3'>{serviceName}</h4>
                     <div className='p-3'>
                     <p className='description-p'>In {serviceName} field, we have experience of many days. And we have { serviceProvider} the best experts in this country for this regard.</p>
                     </div>

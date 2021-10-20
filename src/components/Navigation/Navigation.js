@@ -15,11 +15,11 @@ const Navigation = () => {
     const { user, logOut } = useAuth();
     return (
         <>
-            <Navbar  className='py-3 nav-bg'   sticky="top" collapseOnSelect expand="lg" >
+            <Navbar  className='nav-bg py-2'   sticky="top" collapseOnSelect expand="lg" >
                 <Container>
                     <Navbar.Brand >
-                        <img src={navLogo} style={{ height: "40px", width: "50px" }} alt="" />
-                        <span style={{ color: "white", fontWeight: "800", marginLeft: "20px" }}>Intensive Care Hospital</span>
+                        <img src={navLogo} style={{ height: "50px", width: "60px", border:"2px solid white", borderRadius:"50%", padding:"7px" }} alt="" />
+                        <span className='font-style' style={{ color: "white", fontWeight: "800", marginLeft: "20px" }}>Intensive Care Hospital</span>
                     </Navbar.Brand>
 
                     <Navbar.Toggle />
