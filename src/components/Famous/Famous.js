@@ -1,60 +1,24 @@
 import React from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
-import nero from '../../images/doctors/neuro.jpeg'
-import cardio from '../../images/doctors/cardiologist.jpeg'
-import laser from '../../images/doctors/Laser.jpeg'
-import gyno from '../../images/doctors/gynocologist.jpeg'
+import SingleDoctor from '../SingleDoctor/SingleDoctor';
 import './Famous.css'
 const Famous = () => {
+    const famousDoctors = [
+        { name: 'Dr. Saliha Khatun', dept: 'Cardiologist', hospital: 'Dhaka Medical', img: 'https://raw.githubusercontent.com/mahmudul-11/assignment-10-doctor-photos/main/1.png' },
+        { name: 'Dr. Jiaual Hauque', dept: 'Nurologist', hospital: 'BSRMC', img: 'https://raw.githubusercontent.com/mahmudul-11/assignment-10-doctor-photos/main/2.png' },
+        { name: 'Dr. Sohana Rahman', dept: 'Laser Specialist', hospital: 'BSRMC', img: 'https://raw.githubusercontent.com/mahmudul-11/assignment-10-doctor-photos/main/3.png' },
+        { name: 'Dr. Sujata Islam', dept: 'Gynocologist', hospital: 'Dhaka Medical', img: 'https://raw.githubusercontent.com/mahmudul-11/assignment-10-doctor-photos/main/4.png' },
+    ]
     return (
         <Container className="my-5 text-center">
-            <h1 className="text-center text-info py-5" style={{fontWeight:'800'}} >Our Famous Bangladeshi Doctors </h1>
-            
-            <Row>
-                <Col lg={3} sm={6} xs={6} >
-                    <div className="mx-4" className='galllery'>
-                        <div>
-                            <img src={cardio} alt="" height="200"/>
-                        </div>
-                        <div className='mt-3'>
-                            <h4>Dr. Sibli Khan</h4>
-                            <h6>Cardio Specilist</h6>
-                        </div>
-                    </div>
-                </Col>
-                <Col lg={3} sm={6} xs={6} className='galllery'>
-                <div className="mx-4" className='galllery'>
-                    <div >
-                        <img src={nero} alt="" height="200" />
-                    </div>
-                    <div className='mt-3'>
-                        <h4>Dr.Shoikot</h4>
-                        <h6>Nero Specilist</h6>
-                    </div>
-                    </div>
-                </Col>
-                <Col lg={3} sm={6} xs={6} className='galllery'>
-                <div className="mx-4" className='galllery'>
-                    <div>
-                        <img src={laser} alt="" height="200" />
-                    </div>
-                    <div className='mt-3'>
-                        <h4>Dr. Reduyana</h4>
-                        <h6>Laser Specilist</h6>
-                    </div>
-                    </div>
-                </Col>
-                <Col lg={3} sm={6} xs={6} className='galllery'>
-                <div className="mx-4" className='galllery'>
-                    <div>
-                        <img src={gyno} alt="" height="200" />
-                    </div>
-                    <div>
-                        <h4 className='mt-3'>Dr. Rafsana</h4>
-                        <h6>Gynocologist</h6>
-                    </div>
-                    </div>
-                </Col>
+            <h1 className="text-center text-info pt-5" style={{ fontWeight: '800' }} >Famous Bangladeshi Doctors You Find Here</h1>
+
+            <Row className="mt-5">
+
+                {
+                    famousDoctors.map(doctor =><SingleDoctor key={doctor.name} doctor={doctor}></SingleDoctor>)
+                }
+
             </Row>
         </Container>
     );
